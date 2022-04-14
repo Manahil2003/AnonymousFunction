@@ -1,0 +1,8 @@
+void main(List<String> args) {
+  stdout.write("Enter Number:");
+  for (int i = 0; i <= 5; i++) {
+    int numb = int.tryParse(stdin.readLineSync()!) ?? 1;
+    print(numb);
+  }
+  
+}
