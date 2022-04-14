@@ -1,0 +1,35 @@
+import 'dart:io';
+
+// double Function(double) sqr = (double a) {
+//   return a * a;
+// };
+
+import 'dart:io';
+
+double Function(double, double) CD = (double x, double y) {
+  double g = 0, i, n;
+  if (x < y) {
+    n = x;
+  } else {
+    n = y;
+  }
+  for (i = 1; i <= n; i++) {
+    if (x % i == 0 && y % i == 0) {
+      g = i;
+    }
+  }
+  return g;
+};
+
+main() {
+  stdout.write("Integer 1 : ");
+  double a = double.tryParse(stdin.readLineSync()!) ?? 1;
+
+  stdout.write("Integer 2 : ");
+  double b = double.tryParse(stdin.readLineSync()!) ?? 1;
+
+  print("");
+  print("Common Divisor :");
+
+  print(CD(a, b));
+}
