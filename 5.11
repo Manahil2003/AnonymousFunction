@@ -1,6 +1,6 @@
 import 'dart:io';
 
-final area = (int b, int h) {
+double Function(double, double) area = (double b, double h) {
   double a;
   a = 0.5 * b * h;
   return a;
@@ -10,10 +10,10 @@ main() {
   double a;
 
   stdout.write("Base : ");
-  int base = int.tryParse(stdin.readLineSync()!) ?? 1;
+  double base = double.tryParse(stdin.readLineSync()!) ?? 1;
 
   stdout.write("Height : ");
-  int height = int.tryParse(stdin.readLineSync()!) ?? 1;
+  double height = double.tryParse(stdin.readLineSync()!) ?? 1;
 
   a = area(base, height);
 
