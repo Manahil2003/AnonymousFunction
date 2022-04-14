@@ -1,0 +1,24 @@
+import 'dart:io';
+
+// double Function(double) sqr = (double a) {
+//   return a * a;
+// };
+
+import 'dart:io';
+
+double Function(double) mul = (double globalInt) {
+  double m;
+  m = globalInt * 2;
+  print(m);
+  return m;
+};
+
+main() {
+  stdout.write("Value for Global variables : ");
+  double globalInt = double.tryParse(stdin.readLineSync()!) ?? 1;
+
+  print("");
+  print("Global variable multiplied by 2  :");
+  mul(globalInt);
+  print("");
+}
