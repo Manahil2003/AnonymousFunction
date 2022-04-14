@@ -1,0 +1,27 @@
+import 'dart:io';
+
+// double Function(double) sqr = (double a) {
+//   return a * a;
+// };
+
+import 'dart:io';
+
+double Function(double) Series = (double n) {
+  int i, sum = 0;
+
+  for (i = 1; i <= n; i++) {
+    sum = sum + i;
+  }
+  print("");
+  print("$sum");
+  return n;
+};
+
+main() {
+  stdout.write("Terminal number for series: ");
+  double Tnum = double.tryParse(stdin.readLineSync()!) ?? 1;
+
+  print("");
+  print("Sum Of Series  :");
+  Series(Tnum);
+}
