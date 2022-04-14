@@ -1,0 +1,33 @@
+import 'dart:io';
+
+void info() {
+  stdout.write("Player's Name :");
+  int name = int.tryParse(stdin.readLineSync()!) ?? 0;
+  print("");
+
+  stdout.write("Player's Run :");
+  int runs = int.tryParse(stdin.readLineSync()!) ?? 0;
+  print("");
+
+  stdout.write("Player's Innings :");
+  int innings = int.tryParse(stdin.readLineSync()!) ?? 0;
+  print("");
+
+  stdout.write("Player's Time Not Out :");
+  int timeNotOut = int.tryParse(stdin.readLineSync()!) ?? 0;
+  print("");
+
+  print("------------------------");
+  print("Information about player ");
+  print("-------------------------");
+
+  print("");
+  print(name);
+  print(runs);
+  print(innings);
+  print(timeNotOut);
+}
+
+main() {
+  info();
+}
