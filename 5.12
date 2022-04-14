@@ -1,0 +1,32 @@
+import 'dart:io';
+
+final sqr = (int n) {
+  return n * n;
+};
+
+final cube = (int n) {
+  return n * n * n;
+};
+
+main() {
+  int r;
+
+  stdout.write("Integer 1 for Square  : ");
+  int a = int.tryParse(stdin.readLineSync()!) ?? 1;
+
+  stdout.write("Integer 2 for Cube : ");
+  int b = int.tryParse(stdin.readLineSync()!) ?? 1;
+
+  print("");
+  print("Sqare :");
+  print(sqr(a));
+
+  print("");
+  print("Cube :");
+  print(cube(b));
+
+  print("");
+  r = sqr(a) + cube(b);
+
+  print("Total : $r");
+}
